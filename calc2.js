@@ -15,18 +15,23 @@ function divideOp (a,b) {
 }
 
 function operate (num1, num2, op) {
+    let answer = 0;
     switch (op) {
         case "+":
-            addOp(num1, num2);
+            answer = addOp(num1, num2);
+            return answer;
             break;
         case "-":
-            subtractOp(num1, num2);
+            answer = subtractOp(num1, num2);
+            return answer;
             break;
         case "*":
-            multiplyOp(num1, num2);
+            answer = multiplyOp(num1, num2);
+            return answer;
             break;
         case "/":
-            divideOp(num1, num2);
+            answer = divideOp(num1, num2);
+            return answer;
             break;
         default:
             break;
@@ -36,3 +41,5 @@ function operate (num1, num2, op) {
 var num1 = parseInt(prompt("a"));
 var num2 = parseInt(prompt("b"));
 var operator = prompt("operator");
+
+console.log(operate(num1, num2, operator));
