@@ -35,4 +35,4 @@ function operate (num1, num2, op) {
 
 var num1 = parseInt(prompt("a"));
 var num2 = parseInt(prompt("b"));
-var operator = prompt(operator);
+var operator = prompt("operator");
