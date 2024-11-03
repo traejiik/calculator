@@ -15,24 +15,20 @@ function divideOp (a,b) {
 }
 
 function operate (num1, num2, op) {
-    let answer = 0;
+    let answer;
     switch (op) {
         case "+":
             answer = addOp(num1, num2);
             return answer;
-            break;
         case "-":
             answer = subtractOp(num1, num2);
             return answer;
-            break;
         case "*":
             answer = multiplyOp(num1, num2);
             return answer;
-            break;
         case "/":
             answer = divideOp(num1, num2);
             return answer;
-            break;
         default:
             break;
     }
