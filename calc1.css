@@ -1,12 +1,13 @@
 body {
     font-family: Roboto, sans-serif;
-    background-color: rgb(7, 7, 48);
+    background-color: rgb(255, 255, 255);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .fullContainer {
+    background-color: rgb(1, 15, 52);
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -14,8 +15,8 @@ body {
     padding: 10px;
     height: 650px;
     width: 550px;
-    border: 2px solid white;
-    border-radius: 10px;
+    border: thick solid rgb(90, 86, 86);
+    border-radius: 50px;
 }
 
 .calcFull {
@@ -23,6 +24,12 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.allDisp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .miniDisp, .mainDisp {
@@ -38,7 +45,44 @@ body {
 }
 
 .mainDisp {
-    height: 50px;
+    height: 100px;
     margin-bottom: 10px;
-    background-color: rgb(25, 25, 88);
+    background-color: rgb(5, 5, 40);
+}
+
+.allBtns {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    margin-top: 25px;
+}
+
+button {
+    border: 0px;
+    width: 115px;
+    height: 95px;
+    border-radius: 100px;
+    margin: 5px;
+    padding: 0%;
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+button:hover {
+    filter: brightness(60%);
+}
+
+.opBtns {
+    background-color: rgb(229, 147, 4);
+}
+
+.clrBtn {
+    background-color: rgb(223, 4, 4);
+    color: #f8f3f3;
+}
+
+.eqBtn {
+    background-color: grey;
 }
