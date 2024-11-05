@@ -73,7 +73,7 @@ function setOperator(op) {
     num1 = parseFloat(currentNum);
     operator = op;
     dispReset = true;
-    miniDisp.textContent += op;
+    miniDisp.textContent += " " + op + " ";
 }
 
 function calcResult() {
