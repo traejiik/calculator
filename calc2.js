@@ -34,8 +34,7 @@ function operate (num1, num2, op) {
     }
 }
 
-var num1 = parseInt(prompt("a"));
-var num2 = parseInt(prompt("b"));
-var operator = prompt("operator");
-
-console.log(operate(num1, num2, operator));
+let currentNum = "";
+let num1 = null;
+let num2 = null;
+let operator = null;
