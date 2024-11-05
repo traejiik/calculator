@@ -79,6 +79,7 @@ function setOperator(op) {
 function calcResult() {
     if (operator === null || currentNum === "") return;
     operate();
+    miniDisp.textContent = "";
 }
 
 let currentNum = "";
