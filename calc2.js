@@ -49,6 +49,7 @@ function resetCalc() {
     operator = null;
     dispReset = false;
     mainDisp.textContent = "0";
+    miniDisp.textContent = "0";
 }
 
 let currentNum = "";
@@ -65,4 +66,4 @@ document.querySelectorAll(".btns").forEach(button => {
 });
 
 const clrBtn = document.querySelector(".clrBtn");
-clrBtn.addEventListener("click", resetCalc());
+clrBtn.addEventListener("click", resetCalc);
