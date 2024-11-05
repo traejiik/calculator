@@ -38,6 +38,11 @@ function operate () {
             answer = divideOp(num1, num2);
             break;
     }
+    answer = Math.round(result * 100) / 100;
+    mainDisp.textContent = answer;
+    num1 = answer;
+    operator = null;
+    dispReset = true;
 }
 
 function appendNumber(number) {
