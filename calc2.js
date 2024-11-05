@@ -14,21 +14,29 @@ function divideOp (a,b) {
     return a / b;
 }
 
-function operate (num1, num2, op) {
+function operate () {
+    if (operator === null || dispReset) return;
+
+    num2 = parseFloat(currentNum);
     let answer;
-    switch (op) {
+    switch (operator) {
         case "+":
             answer = addOp(num1, num2);
-            return answer;
+            break;
         case "-":
             answer = subtractOp(num1, num2);
-            return answer;
+            break;
         case "*":
             answer = multiplyOp(num1, num2);
-            return answer;
+            break;
         case "/":
+            if (num2 === 0) {
+                mainDisp.textContent = "Error: Division by 0";
+                resetCalc();
+                return;
+            }
             answer = divideOp(num1, num2);
-            return answer;
+            break;
     }
 }
 
