@@ -90,14 +90,16 @@ let dispReset = false;
 
 const miniDisp = document.querySelector(".miniDisp");
 const mainDisp = document.querySelector(".mainDisp");
+const clrBtn = document.querySelector(".clrBtn");
+const eqBtn = document.querySelector(".eqBtn");
 
 document.querySelectorAll(".btns").forEach(button => {
     button.addEventListener("click", () => appendNumber(button.textContent));
 });
 
-const clrBtn = document.querySelector(".clrBtn");
-clrBtn.addEventListener("click", resetCalc);
-
 document.querySelectorAll(".opBtns").forEach(button => {
     button.addEventListener("click", () => setOperator(button.textContent));
 });
+
+clrBtn.addEventListener("click", resetCalc);
+eqBtn.addEventListener("click", calcResult);
