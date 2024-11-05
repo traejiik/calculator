@@ -53,7 +53,7 @@ function appendNumber(number) {
     }
     currentNum += number;
     mainDisp.textContent = currentNum;
-    miniDisp.textContent = currentNum;
+    miniDisp.textContent += currentNum;
 }
 
 function resetCalc() {
