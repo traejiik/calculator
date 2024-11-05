@@ -32,6 +32,16 @@ function operate (num1, num2, op) {
     }
 }
 
+function appendNumber(number) {
+    if (dispReset) {
+        currentNum = "";
+        dispReset = false;
+    }
+    currentNum += number;
+    mainDisp.textContent = currentNum;
+    miniDisp.textContent = currentNum;
+}
+
 let currentNum = "";
 let num1 = null;
 let num2 = null;
@@ -41,3 +51,6 @@ let dispReset = false;
 const miniDisp = document.querySelector(".miniDisp");
 const mainDisp = document.querySelector(".mainDisp");
 
+document.querySelectorAll(".btns").forEach(button => {
+    button.addEventListener("click", () => appendNumber(button.textContent));
+});
