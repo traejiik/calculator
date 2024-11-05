@@ -52,6 +52,13 @@ function resetCalc() {
     miniDisp.textContent = "";
 }
 
+function setOperator(op) {
+    if (operator !== null) operate();
+    num1 = parseFloat(currentNum);
+    operator = op;
+    resetCalc = true;
+}
+
 let currentNum = "";
 let num1 = null;
 let num2 = null;
@@ -67,3 +74,7 @@ document.querySelectorAll(".btns").forEach(button => {
 
 const clrBtn = document.querySelector(".clrBtn");
 clrBtn.addEventListener("click", resetCalc);
+
+document.querySelectorAll(".opBtns").forEach(button => {
+    button.addEventListener("click", () => setOperator(button.textContent))
+});
