@@ -67,10 +67,13 @@ function resetCalc() {
 }
 
 function setOperator(op) {
-    if (operator !== null) operate();
+    if (operator !== null && !dispReset) {
+        operate();
+    }
     num1 = parseFloat(currentNum);
     operator = op;
     dispReset = true;
+    miniDisp.textContent += op;
 }
 
 let currentNum = "";
