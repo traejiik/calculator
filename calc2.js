@@ -26,21 +26,22 @@ function operate () {
         case "-":
             answer = subtractOp(num1, num2);
             break;
-        case "*":
+        case "x":
             answer = multiplyOp(num1, num2);
             break;
         case "/":
             if (num2 === 0) {
-                mainDisp.textContent = "Error: Division by 0";
-                resetCalc();
+                mainDisp.textContent = "err - math err";
+                miniDisp.textContent = "";
+                dispReset = true;
                 return;
             }
             answer = divideOp(num1, num2);
             break;
     }
-    answer = Math.round(result * 100) / 100;
+    answer = Math.round(answer * 100) / 100;
     mainDisp.textContent = answer;
-    num1 = answer;
+    currentNum = answer;
     operator = null;
     dispReset = true;
 }
@@ -69,7 +70,7 @@ function setOperator(op) {
     if (operator !== null) operate();
     num1 = parseFloat(currentNum);
     operator = op;
-    resetCalc = true;
+    dispReset = true;
 }
 
 let currentNum = "";
@@ -89,5 +90,5 @@ const clrBtn = document.querySelector(".clrBtn");
 clrBtn.addEventListener("click", resetCalc);
 
 document.querySelectorAll(".opBtns").forEach(button => {
-    button.addEventListener("click", () => setOperator(button.textContent))
+    button.addEventListener("click", () => setOperator(button.textContent));
 });
