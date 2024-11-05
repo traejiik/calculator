@@ -49,7 +49,7 @@ function resetCalc() {
     operator = null;
     dispReset = false;
     mainDisp.textContent = "0";
-    miniDisp.textContent = "0";
+    miniDisp.textContent = "";
 }
 
 let currentNum = "";
