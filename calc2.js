@@ -42,6 +42,15 @@ function appendNumber(number) {
     miniDisp.textContent = currentNum;
 }
 
+function resetCalc() {
+    currentNum = "";
+    num1 = null;
+    num2 = null;
+    operator = null;
+    dispReset = false;
+    mainDisp.textContent = "0";
+}
+
 let currentNum = "";
 let num1 = null;
 let num2 = null;
@@ -54,3 +63,6 @@ const mainDisp = document.querySelector(".mainDisp");
 document.querySelectorAll(".btns").forEach(button => {
     button.addEventListener("click", () => appendNumber(button.textContent));
 });
+
+const clrBtn = document.querySelector(".clrBtn");
+clrBtn.addEventListener("click", resetCalc());
