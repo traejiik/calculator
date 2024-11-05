@@ -76,6 +76,11 @@ function setOperator(op) {
     miniDisp.textContent += op;
 }
 
+function calcResult() {
+    if (operator === null || currentNum === "") return;
+    operate();
+}
+
 let currentNum = "";
 let num1 = null;
 let num2 = null;
