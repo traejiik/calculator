@@ -45,16 +45,20 @@ body {
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
     text-align: right;
+    box-sizing: border-box;
+    padding: 15px;
+    align-content: center;
 }
 
 .miniDisp {
-    height: 40px;
+    height: 60px;
     margin: 10px;
 }
 
 .mainDisp {
     height: 100px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    font-size: xxx-large;
 }
 
 .allBtns {
