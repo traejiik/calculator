@@ -29,8 +29,6 @@ function operate (num1, num2, op) {
         case "/":
             answer = divideOp(num1, num2);
             return answer;
-        default:
-            break;
     }
 }
 
@@ -38,3 +36,4 @@ let currentNum = "";
 let num1 = null;
 let num2 = null;
 let operator = null;
+let dispReset = false;
